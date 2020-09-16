@@ -1,0 +1,28 @@
+
+#include<stdio.h>
+int fun(int,int);
+
+int main(){
+	int n1,n2;
+	int no=2;
+	printf("find LCM OF NUMBER:" );
+	printf("\nEnter number one:" );
+	scanf("%d",&n1);
+	printf("Enter number two:" );
+	scanf("%d",&n2);
+	int sum=fun(n1,n2);
+	printf("LCF OF TWO NUMBER %d and %d IS %d",n1,n2,sum);
+}
+int fun(int n1, int n2){
+	 static int temp = 1;    
+    if(temp%n1 == 0 && temp%n2 == 0)
+    {
+        return temp;
+    }
+    else
+    {
+        temp++;
+        fun(n1,n2);
+        return temp;
+    }
+}
