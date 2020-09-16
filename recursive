@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+int fun(int);
+
+int main(){
+	int num;
+	printf("enter number upto with find sum :" );
+	scanf("%d",&num);
+	int sum=fun(num);
+	printf("\n your sum is %d",sum);
+		
+}
+
+int fun(int num){
+	if (num==0){
+		return 0;
+		
+	}
+	else{
+		return num+ fun(num-1);
+	}
+}
