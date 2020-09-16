@@ -1,1 +1,34 @@
 
+#include<stdio.h>
+
+int fun(int,int);
+
+int main(){
+	int num;
+	int no=2;
+	printf("enter number upto with find prime number :" );
+	scanf("%d",&num);
+	int sum=fun(num,no);
+	if(sum==1){
+		printf("\n %d number is not prime number ",num);
+		
+	}
+	else{
+		printf("\n %d number is prime number",num);
+	}
+}
+
+int fun(int num, int no){
+	int digit;
+	if(no<num){
+	digit=num%no;
+	if (digit==0){
+		return 1;
+		
+	}
+	else{
+		fun(num,no+1);
+	}
+}
+
+}
