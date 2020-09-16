@@ -17,6 +17,6 @@ int fun(int num){
 		
 	}
 	else{
-		return num+ fun(num-1);
+		return num%10 + fun(num/10);
 	}
 }
