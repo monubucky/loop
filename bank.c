@@ -98,7 +98,7 @@ void edit(){
 	printf("\n Enter the account no. of the customer whose info you wnat to change :");
 	scanf("%d",&upd.accno);
 	
-	while(fscanf(ptr,"%d %s %d/%d/%d %d %s %s %lf %s %f %d/%d/%d \n",&add.accno,add.name,&add.dob.month,&add.dob.date,&add.dob.year,&add.age,add.address,add.citizenship,&add.phone,add.acc_type,&add.amt,&add.deposite.month,&add.deposite.date,&add.deposite.year)!=EOF)
+	while(fscanf(old,"%d %s %d/%d/%d %d %s %s %lf %s %f %d/%d/%d \n",&add.accno,add.name,&add.dob.month,&add.dob.date,&add.dob.year,&add.age,add.address,add.citizenship,&add.phone,add.acc_type,&add.amt,&add.deposite.month,&add.deposite.date,&add.deposite.year)!=EOF)
 	{
 		if(upd.accno==add.accno){
 			test=1;
