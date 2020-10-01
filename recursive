@@ -10,13 +10,18 @@ int main(){
 	printf("\n your sum is %d",sum);
 		
 }
-
+//Here recussion is used in function fun which uses one of the important concepts called stack
 int fun(int num){
 	if (num==0){
-		return 0;
+		return 0;			//stack ends
 		
 	}
 	else{
-		return num%10 + fun(num/10);
+		return num%10 + fun(num/10); 	//stack starts
 	}
 }
+
+//for example if fun(2) called then 
+//first of all ,the stacks enters value 2%10=2 +fun(0) to the top
+//second if condition satisfies and returns 0 to the top of stack
+//hence finally fun(2) returns 2+0=2 to the sum.
